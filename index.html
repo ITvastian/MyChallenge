@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Challenge Desktop/Mobile</title>
+  <link rel="stylesheet" href="./style/style.css" />
+  <!-- <link rel="stylesheet" href="./style/jquery-3.7.0.min.js" />
+  <script src="https://cdn.tailwindcss.com"></script> -->
+</head>
+
+<body>
+  <!-- BTN Modal -->
+  <input type="button" value="Abrir Modal" class="openModal" id="myBtn"/>
+  <div class="texto">
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <!-- Column left -->
+
+        <div class="pop-up">
+          <div class="pop-up-wrap">
+            <!-- <img src="./images/bg-sidebar-mobile.svg" class="mobile-img" alt=""> -->
+            <div class="pop-up-title">
+              <button type="button" class="btn1" onclick="stepVolver()">1</button>
+              <div class="step1">
+                <h2 class="h2">STEP 1</h2>
+                <h1 class="h1">Your Info</h1>
+              </div>
+              <button type="button" class="btn1" id="btn2" onclick="stepVolver(),step2Ir()">2</button>
+              <div class="step2">
+                <h2 class="h2">STEP 2</h2>
+                <h1 class="h1">Select Plan</h1>
+              </div>
+              <button type="button" class="btn1" id="btn3" onclick="step3Ir()">3</button>
+              <div class="step3">
+                <h2 class="h2">STEP 3</h2>
+                <h1 class="h1">Add-ods</h1>
+              </div>
+              <button type="button" class="btn1" id="btn4" onclick="step4Ir()">4</button>
+              <div class="step4">
+                <h2 class="h2">STEP 4</h2>
+                <h1 class="h1">Summary</h1>
+              </div>
+            </div>
+
+            <!-- Column right -->
+
+            <div class="suscription" id="suscription">
+              <div class="sub-content" id="info">
+                <h2 class="subContent-h2">Personal info</h2>
+                <p>Please provide your name, email address, and phone number.</p>
+                <form name="miForm" action="/" onsubmit="validarFormulario(event),step2Ir()" method="POST">
+                  <button value="Enviar" class="subs-send" id="send" type="submit">Next Step</button>
+                  <h1>Name</h1>
+                  <input type="text" id="miInput" name="nombre" class="subs-email" placeholder="e.g Stephen King"
+                  autocomplete="off"  />
+                    <span class="error-message" id="nombre-error"></span>
+                  <label for="user" class="form_label"></label>
+                  <h1>Email Address</h1>
+                  <input type="email" class="subs-email" name="email" placeholder="e.g.stephenking@lorem.com"
+                  autocomplete="off"  />
+                    <span class="error-message" id="email-error"></span>
+                  <label for="email" class="form_label"></label>
+                  <h1>Phone Number</h1>
+                  <input type="number" name="number" class="subs-email" placeholder="e.g +1 234 567 890" autocomplete="off"  />
+                  <span class="error-message" id="number-error"></span>
+                  <label for="number" class="form_label"></label>
+                  <p class="warning" id="warning"></p>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+  <script src="./goBack.js"></script>
+  <script src="./step2Ir.js"></script>
+  <script src="./step3Ir.js"></script>
+  <script src="./step4Ir.js"></script>
+</body>
+</html>
